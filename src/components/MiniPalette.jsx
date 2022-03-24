@@ -39,10 +39,10 @@ const MiniPalette = React.memo(
           onClick={handleDeletePalette}
         />
         <div className={classes.colors}>{miniColorBoxes}</div>
-        <h5 className={classes.title}>
+        <h2 className={classes.title}>
           {paletteName}
           <span className={classes.emoji}>{emoji}</span>
-        </h5>
+        </h2>
       </div>
     );
   }
