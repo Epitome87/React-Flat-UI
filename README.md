@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# React - Flat UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A design and feature clone of the simple-yet-beatiful Flat UI website
 
-## Available Scripts
+View the live website at its [Github Page](https://epitome87.github.io/React-Flat-UI/)
 
-In the project directory, you can run:
+<img src="github-assets/preview-homepage.png" width="800px">
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is a fully-featured clone of the Flat UI website. It was designed based around the appearance / functionality of the Flat UI websie in the month of November, 2021. It includes all the features found on the actual website, other than audio playing. Extra features were also added, such as the ability for the user to create and save their own custom palettes. Some qualify-of-life changes were also made, such as detecting the contrast of text against a colored backdground and changing that text's color dynamically in order to be more readable, as well as a brightness slider to view colors at 10 different shades.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech Stack / Packages
 
-### `npm test`
+- React
+- React Router (v6)
+- Material UI
+- React Transition Group (for transitions between routes)
+- React Color (for user color pickers)
+- Chroma.js (for color conversions / utilities)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### View Premade Palettes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Browse from a handful of pre-made color palettes. You can click an individual color and automatically copy its value (based on a desired output -- including RGB, RGBA, and Hex). There is also a slider to view the color palette at 10 different brightness levels.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="github-assets/preview-palette.png" width="800px">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Create a Custom Palette
 
-### `npm run eject`
+The user can create, edit, delete, and save their own unique color palettes! They can name the palette and select an emoji to represent it, and that palette will be locally stored and ready to view the next time they visit the site.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="github-assets/preview-creation.png" width="800px">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Plans
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Although this project was initially meant to be a simple clone of Flat UI, perhaps backend-functionality will be added to it. This might include the ability for users to login, share their own color palettes, and comment on those by other creators.
