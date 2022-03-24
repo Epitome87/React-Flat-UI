@@ -1,13 +1,24 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, {
+  lazy,
+  Suspense,
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+} from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import NewPaletteForm from './components/NewPaletteForm';
-import Page from './components/Page';
-import Palette from './components/Palette';
-import PaletteList from './components/PaletteList';
-import SingleColorPalette from './components/SingleColorPalette';
 import seedPalettes from './seedPalettes';
 import useDocumentTitle from './effects/useDocumentTitle';
+
+// Use React lazy on these router Components
+const Page = lazy(() => import('./components/Page'));
+const Palette = lazy(() => import('./components/Palette'));
+const PaletteList = lazy(() => import('./components/PaletteList'));
+const SingleColorPalette = lazy(() =>
+  import('./components/SingleColorPalette')
+);
+const NewPaletteForm = lazy(() => import('./components/NewPaletteForm'));
 
 function App() {
   const [documentTitle, setDocumentTitle] = useDocumentTitle(
@@ -46,55 +57,60 @@ function App() {
         classNames='page'
         timeout={useMemo(() => 500)}
       >
-        <Routes location={location}>
-          <Route
-            path='/palette/new'
-            element={
-              <Page>
-                <NewPaletteForm savePalette={savePalette} palettes={palettes} />
-              </Page>
-            }
-          />
-          <Route
-            path='/'
-            element={
-              <Page>
-                <PaletteList
-                  palettes={palettes}
-                  handleDelete={useMemo(() => deletePalette, [deletePalette])}
-                />
-              </Page>
-            }
-          />
-          <Route
-            path='/palette/:id'
-            element={
-              <Page>
-                <Palette palettes={palettes} />
-              </Page>
-            }
-          />
-          <Route
-            path='/palette/:paletteId/:colorId'
-            element={
-              <Page>
-                <SingleColorPalette palettes={palettes} />
-              </Page>
-            }
-          />
-          {/* Catch-all Route */}
-          <Route
-            path='*'
-            element={
-              <Page>
-                <PaletteList
-                  palettes={palettes}
-                  handleDelete={useMemo(() => deletePalette, [deletePalette])}
-                />
-              </Page>
-            }
-          />
-        </Routes>
+        <Suspense fallback={<React.Fragment>Loading...</React.Fragment>}>
+          <Routes location={location}>
+            <Route
+              path='/palette/new'
+              element={
+                <Page>
+                  <NewPaletteForm
+                    savePalette={savePalette}
+                    palettes={palettes}
+                  />
+                </Page>
+              }
+            />
+            <Route
+              path='/'
+              element={
+                <Page>
+                  <PaletteList
+                    palettes={palettes}
+                    handleDelete={useMemo(() => deletePalette, [deletePalette])}
+                  />
+                </Page>
+              }
+            />
+            <Route
+              path='/palette/:id'
+              element={
+                <Page>
+                  <Palette palettes={palettes} />
+                </Page>
+              }
+            />
+            <Route
+              path='/palette/:paletteId/:colorId'
+              element={
+                <Page>
+                  <SingleColorPalette palettes={palettes} />
+                </Page>
+              }
+            />
+            {/* Catch-all Route */}
+            <Route
+              path='*'
+              element={
+                <Page>
+                  <PaletteList
+                    palettes={palettes}
+                    handleDelete={useMemo(() => deletePalette, [deletePalette])}
+                  />
+                </Page>
+              }
+            />
+          </Routes>
+        </Suspense>
       </CSSTransition>
     </TransitionGroup>
   );
