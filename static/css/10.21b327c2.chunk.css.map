@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles/ColorPickerFormStyles.css"],"names":[],"mappings":"AAAA,aACE,oBACF","file":"10.21b327c2.chunk.css","sourcesContent":[".ColorPicker {\r\n  width: 100% !important;\r\n}\r\n"]}
