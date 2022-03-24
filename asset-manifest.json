@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-Flat-UI/static/css/main.0e63bf2c.chunk.css",
+    "main.js": "/React-Flat-UI/static/js/main.c8324a76.chunk.js",
+    "main.js.map": "/React-Flat-UI/static/js/main.c8324a76.chunk.js.map",
+    "runtime-main.js": "/React-Flat-UI/static/js/runtime-main.0616a398.js",
+    "runtime-main.js.map": "/React-Flat-UI/static/js/runtime-main.0616a398.js.map",
+    "static/css/2.74cb0230.chunk.css": "/React-Flat-UI/static/css/2.74cb0230.chunk.css",
+    "static/js/2.e3f8b4bb.chunk.js": "/React-Flat-UI/static/js/2.e3f8b4bb.chunk.js",
+    "static/js/2.e3f8b4bb.chunk.js.map": "/React-Flat-UI/static/js/2.e3f8b4bb.chunk.js.map",
+    "static/js/3.524b042f.chunk.js": "/React-Flat-UI/static/js/3.524b042f.chunk.js",
+    "static/js/3.524b042f.chunk.js.map": "/React-Flat-UI/static/js/3.524b042f.chunk.js.map",
+    "index.html": "/React-Flat-UI/index.html",
+    "static/css/2.74cb0230.chunk.css.map": "/React-Flat-UI/static/css/2.74cb0230.chunk.css.map",
+    "static/css/main.0e63bf2c.chunk.css.map": "/React-Flat-UI/static/css/main.0e63bf2c.chunk.css.map",
+    "static/js/2.e3f8b4bb.chunk.js.LICENSE.txt": "/React-Flat-UI/static/js/2.e3f8b4bb.chunk.js.LICENSE.txt",
+    "static/media/bg.cf55b620.svg": "/React-Flat-UI/static/media/bg.cf55b620.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0616a398.js",
+    "static/css/2.74cb0230.chunk.css",
+    "static/js/2.e3f8b4bb.chunk.js",
+    "static/css/main.0e63bf2c.chunk.css",
+    "static/js/main.c8324a76.chunk.js"
+  ]
+}
