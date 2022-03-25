@@ -73,9 +73,39 @@ function Navbar({
             },
           }}
         >
-          <MenuItem value='hex'>HEX (#010203)</MenuItem>
-          <MenuItem value='rgb'>RGB - (1, 2, 3)</MenuItem>
-          <MenuItem value='rgba'>RGBA - (1, 2, 3, 0.4)</MenuItem>
+          <MenuItem
+            value='hex'
+            sx={{
+              ':hover': {
+                backgroundColor: 'black !important',
+                color: 'white',
+              },
+            }}
+          >
+            HEX (#010203)
+          </MenuItem>
+          <MenuItem
+            value='rgb'
+            sx={{
+              ':hover': {
+                backgroundColor: 'black !important',
+                color: 'white',
+              },
+            }}
+          >
+            RGB - (1, 2, 3)
+          </MenuItem>
+          <MenuItem
+            value='rgba'
+            sx={{
+              ':hover': {
+                backgroundColor: 'black !important',
+                color: 'white',
+              },
+            }}
+          >
+            RGBA - (1, 2, 3, 0.4)
+          </MenuItem>
         </Select>
       </div>
       <Snackbar
