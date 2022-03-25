@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@mui/styles';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import MiniPalette from './MiniPalette';
-import paletteListStyles from '../styles/PaletteListStyles';
+import { withStyles } from '@mui/styles';
+import Avatar from '@mui/material/Avatar';
+import blue from '@mui/material/colors/blue';
+import CheckIcon from '@mui/icons-material/Check';
+import CloseIcon from '@mui/icons-material/Close';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
-import Avatar from '@mui/material/Avatar';
+import { keyframes } from '@mui/system';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
-import CheckIcon from '@mui/icons-material/Check';
-import CloseIcon from '@mui/icons-material/Close';
-import blue from '@mui/material/colors/blue';
 import red from '@mui/material/colors/red';
-import useDocumentTitle from '../effects/useDocumentTitle';
-import { keyframes } from '@mui/system';
 import styled from '@mui/material/styles/styled';
 import audio from '../assets/comic_13.wav';
+import MiniPalette from './MiniPalette';
+import paletteListStyles from '../styles/PaletteListStyles';
+import useDocumentTitle from '../effects/useDocumentTitle';
 
 const squeeze = keyframes`
 0% {
@@ -78,7 +78,6 @@ const PaletteList = React.memo(({ classes, palettes, handleDelete }) => {
     <div className={classes.PaletteList}>
       <div className={classes.container}>
         <nav className={classes.nav}>
-          {/* <Link to='/'> */}
           <SqueezeableTitle
             className={classes.title}
             component='h1'
@@ -86,10 +85,6 @@ const PaletteList = React.memo(({ classes, palettes, handleDelete }) => {
           >
             Flat UI - React Clone
           </SqueezeableTitle>
-          {/* </Link> */}
-          <audio id='beep' preload='auto'>
-            <source src='../../public/comic_13.wav' />
-          </audio>
           <Link to='/palette/new'>Create New Palette</Link>
         </nav>
 
