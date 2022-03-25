@@ -30,8 +30,6 @@ const MiniPalette = React.memo(
       );
     });
 
-    console.log('rendering', paletteName);
-
     return (
       <div className={classes.root} onClick={handleClickPalette}>
         <DeleteForeverIcon

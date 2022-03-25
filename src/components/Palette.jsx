@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { withStyles } from '@mui/styles';
+import { generatePalette } from '../colorHelpers';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
 import PaletteFooter from './PaletteFooter';
-import { generatePalette } from '../colorHelpers';
-import { withStyles } from '@mui/styles';
 import paletteStyles from '../styles/PaletteStyles';
 import useDocumentTitle from '../effects/useDocumentTitle';
 
@@ -23,7 +23,6 @@ const Palette = ({ palettes, classes }) => {
 
   // Basically componentDidMount
   useEffect(() => {
-    console.log('PAL', palette);
     setDocumentTitle(`${palette.paletteName}`);
   }, [palette]);
 
