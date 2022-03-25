@@ -16,6 +16,36 @@ import CloseIcon from '@mui/icons-material/Close';
 import blue from '@mui/material/colors/blue';
 import red from '@mui/material/colors/red';
 import useDocumentTitle from '../effects/useDocumentTitle';
+import { keyframes } from '@mui/system';
+import styled from '@mui/material/styles/styled';
+import audio from '../assets/comic_13.wav';
+
+const squeeze = keyframes`
+0% {
+  transform: scale(1, 1);
+} 
+
+50% {
+  transform: scale(0.9, 1);
+}
+
+70% {
+  transform: scale(0.9, 0.3);
+}
+
+100% {
+  transform: scale(0.9, 0.8);
+}
+`;
+
+const SqueezeableTitle = styled('h1')({
+  cursor: 'pointer',
+  userSelect: 'none',
+  transformOrigin: 'left',
+  ':active': {
+    animation: `${squeeze} 0.4s ease forwards`,
+  },
+});
 
 const PaletteList = React.memo(({ classes, palettes, handleDelete }) => {
   const [documentTitle, setDocumentTitle] = useDocumentTitle(
@@ -40,13 +70,26 @@ const PaletteList = React.memo(({ classes, palettes, handleDelete }) => {
     closeDialog();
   };
 
+  const playAudio = () => {
+    new Audio(audio).play();
+  };
+
   return (
     <div className={classes.PaletteList}>
       <div className={classes.container}>
         <nav className={classes.nav}>
-          <Link to='/'>
-            <h1 className={classes.title}>Flat UI - React Clone</h1>
-          </Link>
+          {/* <Link to='/'> */}
+          <SqueezeableTitle
+            className={classes.title}
+            component='h1'
+            onMouseDown={playAudio}
+          >
+            Flat UI - React Clone
+          </SqueezeableTitle>
+          {/* </Link> */}
+          <audio id='beep' preload='auto'>
+            <source src='../../public/comic_13.wav' />
+          </audio>
           <Link to='/palette/new'>Create New Palette</Link>
         </nav>
 
