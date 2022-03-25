@@ -105,7 +105,7 @@ const styles = {
     zIndex: '0',
     width: ' 100%',
     height: ' 100%',
-    transition: 'transform 0.6s ease-in-out',
+    transition: 'transform 0.3s ease-in-out',
     transform: 'scale(0.1)',
   },
 
@@ -158,7 +158,7 @@ const styles = {
     opacity: '1',
     transform: 'scale(1)',
     zIndex: '25',
-    transition: 'all 0.4s ease-in-out 0.5s',
+    transition: 'all 0.4s ease-in-out 0.15s',
     transitionProperty: 'opacity, transform, z-index',
     /* Fixes a bug where the last ColorBox in a Palette had its copy-msg element blocking the center ColorBox from being clicked  */
     visibility: 'visible',
