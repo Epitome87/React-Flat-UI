@@ -81,7 +81,7 @@ const PaletteList = React.memo(({ classes, palettes, handleDelete }) => {
           <SqueezeableTitle
             className={classes.title}
             component='h1'
-            onMouseDown={playAudio}
+            onPointerDown={playAudio}
           >
             Flat UI - React Clone
           </SqueezeableTitle>
