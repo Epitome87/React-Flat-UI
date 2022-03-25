@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-flat-ui"]=this["webpackJsonpreact-flat-ui"]||[]).push([[11],{230:function(t,c,e){},432:function(t,c,e){"use strict";e.r(c);e(0),e(230);var a=e(2);c.default=function(t){var c=t.children;return Object(a.jsx)("section",{className:"Page",children:c})}}}]);
-//# sourceMappingURL=11.1190bef2.chunk.js.map
