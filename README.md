@@ -8,7 +8,7 @@ View the live website at its [Github Page](https://epitome87.github.io/React-Fla
 
 ## Overview
 
-This is a fully-featured clone of the Flat UI website. It was designed based around the appearance / functionality of the Flat UI websie in the month of November, 2021. It includes all the features found on the actual website, other than audio playing. Extra features were also added, such as the ability for the user to create and save their own custom palettes. Some qualify-of-life changes were also made, such as detecting the contrast of text against a colored backdground and changing that text's color dynamically in order to be more readable, as well as a brightness slider to view colors at 10 different shades.
+This is a fully-featured clone of the Flat UI website. It was designed based around the appearance / functionality of the Flat UI websie in the month of November, 2021. It includes all the main features found on the actual website, including audio. Extra features were also added, such as the ability for the user to create and save their own custom palettes (locally). Some qualify-of-life changes were also made, such as detecting the contrast of text against a colored backdground and changing that text's color dynamically in order to be more readable, as well as a brightness slider to view colors at 10 different shades.
 
 ## Tech Stack / Packages
 
